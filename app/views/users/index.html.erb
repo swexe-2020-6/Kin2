@@ -1,0 +1,11 @@
+<%= link_to "戻る", root_path %>
+<%= link_to "新規作成", new_user_path %>
+
+<table border = "1">
+    <% @user.each do |nadaru| %>
+    <tr>
+        <td><%= nadaru.uid %></td>
+        <td><%= link_to "削除", user_path(nadaru.id), method: :delete %></td>
+    </tr>
+    <% end %>
+</table>

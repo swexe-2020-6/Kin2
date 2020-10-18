@@ -1,0 +1,8 @@
+<%= link_to "戻る", users_path %>
+<%= form_for @user, url: {action: :create} do |nadaru| %>
+<%= nadaru.label "ID" %>
+<%= nadaru.text_field :uid %>
+<%= nadaru.label "password" %>
+<%= nadaru.text_field :pass %>
+<%= nadaru.submit "登録" %>
+<% end %>
