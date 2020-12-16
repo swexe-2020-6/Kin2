@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'top#main'
   get 'top/logout'
   get 'get_image/:id', to: 'images#get_image'
+  resources :likes
 #    get "application/L4"
 #    root "application#L4"
 end
