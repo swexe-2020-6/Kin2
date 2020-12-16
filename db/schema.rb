@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_12_09_050851) do
-
-  create_table "likes", force: :cascade do |t|
-=======
 ActiveRecord::Schema.define(version: 2020_12_09_071215) do
 
   create_table "images", force: :cascade do |t|
     t.string "title"
     t.binary "file"
->>>>>>> d844865c9c41ebb24b07e153d82cc70d4bbb81d4
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

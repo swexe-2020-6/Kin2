@@ -2,7 +2,8 @@ class TopController < ApplicationController
   
   def main
     if session[:login_uid]
-      render :main
+     # render :main
+     redirect_to images_path
     else
       render :login
     end

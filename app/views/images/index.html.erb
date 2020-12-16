@@ -2,14 +2,11 @@
     <p>
         <%= image.title %>
         <%= image_tag "/get_image/#{image.id}" %>
-      <% if image.likes.empty? %>
-        <%= link_to 'お気に入り解除',likes_path(),method: :post %>
-      <% else %>
-        <%= link_to 'お気に入り',like_path(),method: :delete %>
-      <% end %>    
+      
         <%= link_to '削除', "/images/#{image.id}", method: :delete %>
         <%= link_to '編集', "/images/#{image.id}/edit" %>
     </p>
 <% end %>
 
 <%= link_to '新規追加', '/images/new' %>
+<%= link_to 'ログアウト' , top_logout_path %>

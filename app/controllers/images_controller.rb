@@ -36,6 +36,7 @@ class ImagesController < ApplicationController
     def get_image
         image = Image.find(params[:id])
         send_data image.file, disposition: :inline, type: 'image/png'
+        logger.debug("---------")
     end
     
     
