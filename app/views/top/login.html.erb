@@ -1,9 +1,10 @@
-<%= form_tag '/top/login', method: :post do %>
-    <%= label_tag :uid, 'ユーザーID' %>
-    <%= text_field_tag :uid %>
-    <%= label_tag :pass, 'パスワード' %>
-    <%= password_field_tag :pass %>
-    <%= submit_tag '登録' %>
+<h1 style="background-color:#ff00cc"><center>Tweetgram</center></h1>
+<body bgcolor="#33ccff">
+<font size = "6"><%= form_tag '/top/login', method: :post do %>
+   <center> <%= label_tag :uid, 'ユーザーID:' %><br>
+    <%= text_field_tag :uid %><br>
+    <%= label_tag :pass, 'パスワード:' %><br>
+    <%= password_field_tag :pass %><br>
+    <%= submit_tag 'ログイン' %></font><font size = "3"></font><%= link_to "管理・新規ページへ", users_path %></center>
 <% end %>
-
-<%= link_to "管理画面", users_path %>
+</font></body>

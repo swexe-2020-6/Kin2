@@ -1,8 +1,9 @@
-<%= link_to "戻る", users_path %>
+<h1 style="background-color:#ff00cc"><center>Tweetgram</center></h1>
 <%= form_for @user, url: {action: :create} do |nadaru| %>
-<%= nadaru.label :uid, "ID" %>
-<%= nadaru.text_field :uid %>
-<%= nadaru.label :pass, "password" %>
-<%= nadaru.text_field :pass %>
-<%= nadaru.submit "登録" %>
+<body bgcolor="#33ccff"><center><font size = "5"><%= nadaru.label :uid, "ユーザID:" %><br>
+<%= nadaru.text_field :uid %><br>
+<%= nadaru.label :pass, "パスワード:" %><br>
+<%= nadaru.text_field :pass %><br>
+<%= nadaru.submit "登録" %></font>
+<%= link_to "戻る", users_path %></center></body>
 <% end %>

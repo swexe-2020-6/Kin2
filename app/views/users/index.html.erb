@@ -1,11 +1,16 @@
-<%= link_to "戻る", root_path %>
-<%= link_to "新規作成", new_user_path %>
+<h1 style="background-color:#ff00cc"><center>Tweetgram</center></h1>
+<body bgcolor="#33ccff">
+<font size = "6"><%= link_to "ユーザ新規登録", new_user_path %><br>
+<%= link_to "戻る", root_path %><br></font>
+・登録済みユーザ
 
 <table border = "1">
     <% @user.each do |nadaru| %>
     <tr>
+        
         <td><%= nadaru.uid %></td>
         <td><%= link_to "削除", user_path(nadaru.id), method: :delete %></td>
     </tr>
     <% end %>
 </table>
+</body>

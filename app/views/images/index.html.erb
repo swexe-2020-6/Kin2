@@ -1,6 +1,9 @@
-<% @images.each do |image| %>
+<h1 style="background-color:#ff00cc"><center>Tweetgram</center></h1>
+
+<body bgcolor="#33ccff">
+<font size = "6"><% @images.each do |image| %>
     <p>
-        <%= image.title %>
+        <%= image.title %><br>
         <%= image_tag "/get_image/#{image.id}" %>
       
         <%= link_to '削除', "/images/#{image.id}", method: :delete %>
@@ -8,5 +11,6 @@
     </p>
 <% end %>
 
-<%= link_to '新規追加', '/images/new' %>
+<%= link_to '新規追加', '/images/new' %><br>
 <%= link_to 'ログアウト' , top_logout_path %>
+</body></font>

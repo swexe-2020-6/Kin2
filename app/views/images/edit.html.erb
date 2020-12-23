@@ -1,13 +1,17 @@
+<h1 style="background-color:#ff00cc"><center>Tweetgram</center></h1>
+<body bgcolor="#33ccff">
+<font size = "6">
 <%= form_for @image, url:{action: :update} do |f| %>
-<p>
-    <%= f.label :title, 'タイトル' %>
-    <%= f.text_field :title %>
+<center><p>
+    <%= f.label :title, 'タイトル:' %>
+    <%= f.text_field :title %><br>
 </p>
 
 <p>
-    <%= f.label :file, 'ファイル' %>
-    <%= f.file_field :file %>
+    <%= f.label :file, 'ファイル:' %>
+    <%= f.file_field :file %><br>
 </p>
 
     <%= f.submit '更新' %>
 <% end %>
+</body></font></center>
